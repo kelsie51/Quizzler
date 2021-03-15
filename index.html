@@ -23,7 +23,7 @@
             readonly
             id="quizinstructions"
             class = "textareastyle"
-            placeholder="Click button to begin quiz"
+            placeholder="Click button to begin quiz" 
             aria-label="Code quiz instructions: Click button to begin quiz"            
           ></textarea>
         </div>
@@ -40,17 +40,22 @@
         </div>
         <div class="card-body">
           <!--Put instructions here. Text area may or may not be the right tool. If it's used, change ID-->
-          <textarea
-            readonlyea
+          <textarea            
             id="question1text"
+            name = "question1TextName";
             class = "textareastyle"
-            placeholder="Click button to begin quiz"
+            placeholder=""
             aria-label="Code quiz instructions: Click button to begin quiz"            
-          ></textarea>
+          ></textarea>          
         </div>
-        <div class="card-footer">
-         
-          <button id="btnQuestion1" class="btn">Start Quiz</button>
+        <div class="card-footer">    
+          <div id="question1Options">     
+            <button id="btnQuestion1Option1" class="btn"></button>
+            <button id="btnQuestion1Option2" class="btn"></button>
+            <!--More options go here-->
+          </div>
+          <button id="btnQuestion1Next" class="btn hide">Next</button>
+      
         </div>
       </div>
       <!--Question 1 ends here-->
