@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Code Quiz</h1>
+      </header>
+
+      <div id="startquiz" class="card">
+        <div class="card-header"> 
+          <h2>Code Quiz</h2>
+        </div>
+        <div class="card-body">
+          <!--Put instructions here. Text area may or may not be the right tool. If it's used, change ID-->
+          <textarea
+            readonly
+            id="quizinstructions"
+            class = "textareastyle"
+            placeholder="Click button to begin quiz"
+            aria-label="Code quiz instructions: Click button to begin quiz"            
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <!--Change ID and button text-->
+          <button id="btnQuizStart" class="btn">Start Quiz</button>
+        </div>
+      </div>
+
+      <!--Question 1 starts here-->
+      <div id="question1" class="card hide">
+        <div class="card-header"> 
+          <h2>Question 1</h2>
+        </div>
+        <div class="card-body">
+          <!--Put instructions here. Text area may or may not be the right tool. If it's used, change ID-->
+          <textarea
+            readonlyea
+            id="question1text"
+            class = "textareastyle"
+            placeholder="Click button to begin quiz"
+            aria-label="Code quiz instructions: Click button to begin quiz"            
+          ></textarea>
+        </div>
+        <div class="card-footer">
+         
+          <button id="btnQuestion1" class="btn">Start Quiz</button>
+        </div>
+      </div>
+      <!--Question 1 ends here-->
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
