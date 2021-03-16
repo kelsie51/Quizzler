@@ -124,6 +124,16 @@ button[disabled] {
   overflow: hidden;
 }
 
+#myProgress {
+  width: 100%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: hsl(360, 91%, 36%);
+}
 
 /*end*/
 
