@@ -45,20 +45,40 @@
             name = "question1TextName";
             class = "textareastyle"
             placeholder=""
-            aria-label="Code quiz instructions: Click button to begin quiz"            
+            aria-label="Question 1"            
           ></textarea>          
         </div>
-        <div class="card-footer">    
-          <div id="question1Options">     
-            <button id="btnQuestion1Option1" class="btn"></button>
-            <button id="btnQuestion1Option2" class="btn"></button>
-            <!--More options go here-->
-          </div>
-          <button id="btnQuestion1Next" class="btn hide">Next</button>
-      
+        <div class="card-footer">               
+          <button id="btnQuestion1Option1" class="btn"></button>
+          <button id="btnQuestion1Option2" class="btn"></button>
+          <!--More options go here-->               
         </div>
       </div>
       <!--Question 1 ends here-->
+
+      <!--Question 2 starts here-->
+      <div id="question2" class="card hide">
+        <div class="card-header"> 
+          <h2>Question 2</h2>
+        </div>
+        <div class="card-body">
+          <!--Put instructions here. Text area may or may not be the right tool. If it's used, change ID-->
+          <textarea            
+            id="question2text"
+            name = "question2TextName";
+            class = "textareastyle"
+            placeholder=""
+            aria-label="Question 2"            
+          ></textarea>          
+        </div>
+        <div class="card-footer">               
+          <button id="btnQuestion2Option1" class="btn"></button>
+          <button id="btnQuestion2Option2" class="btn"></button>
+          <button id="btnQuestion2Option3" class="btn"></button>
+          <!--More options go here-->               
+        </div>
+      </div>
+      <!--Question 2 ends here-->
 
     </div>
     <script src="script.js"></script>
