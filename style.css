@@ -135,6 +135,9 @@ button[disabled] {
   background-color: hsl(360, 91%, 36%);
 }
 
+.center{
+  text-align: center;
+}
 /*end*/
 
 

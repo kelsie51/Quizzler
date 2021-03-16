@@ -1,3 +1,8 @@
+//TODO: make actual questions/answers
+//TODO: make last question functions end the game
+//TODO: local storage
+//TODO: final cleanup/distribute new CSS rules
+
 var questions = ["Are you a new student?", "Look a airplane?","What does this go to?", "Where are the sun go?"] ;
 var trueFalse = ["True", "False"];
 var question2Options = ["I saw a airplane", "That's a pretty cool airplane", "Am I a airplane?"];
@@ -6,6 +11,8 @@ var rightWrong = ["Great job!", "Incorrect answer. Time is speeding up!!!"];
 
 var elem = document.getElementById("myBar");
 var barIncrement = 1;
+var correctCount = 0;
+const questionCount = 4;
 
 function showHide(show, hide){
     show.classList.remove('hide');
@@ -17,64 +24,97 @@ function showHide(show, hide){
 //Question 1 buttons
 document.querySelector("#btnQuestion1Option1").addEventListener("click", function () {
     //correct answer
-        showHide(question2, question1);         
+        showHide(question2, question1);  
+        document.getElementById('message').innerText = rightWrong[0]; 
+        correctCount++; 
+             
 });
 document.querySelector("#btnQuestion1Option2").addEventListener("click", function () {
     //incorrect answer
       showHide(question2, question1);
       //speed up progress bar if answer is incorrect
-      barIncrement = 3;     
+      barIncrement = 3;    
+      document.getElementById('message').innerText = rightWrong[1];   
 });
 
 //Question 2 buttons
 document.querySelector("#btnQuestion2Option1").addEventListener("click", function () {
-    //incorrect answer
+    //incorrect answerdocument.getElementById('message').innerText = rightWrong[0];  
         showHide(question3, question2);
+        document.getElementById('message').innerText = rightWrong[1];  
         //speed up progress bar if answer is incorrect
-        barIncrement = 6;        
+        barIncrement = 6;    
+
 });
 document.querySelector("#btnQuestion2Option2").addEventListener("click", function () {
     //correct answer
-        showHide(question3, question2);         
+        showHide(question3, question2);  
+        document.getElementById('message').innerText = rightWrong[0]; 
+        correctCount++;         
 });
 document.querySelector("#btnQuestion2Option3").addEventListener("click", function () {
     //correct answer
-        showHide(question3, question2);         
+        showHide(question3, question2);  
+        document.getElementById('message').innerText = rightWrong[0];  
+        correctCount++;        
 });
 
 //Question 3 buttons
 document.querySelector("#btnQuestion3Option1").addEventListener("click", function () {
-    //incorrect answer
-        showHide(question4, question3);           
+    //correct answer
+        showHide(question4, question3);  
+        document.getElementById('message').innerText = rightWrong[0]; 
+        correctCount++;           
 });
 document.querySelector("#btnQuestion3Option2").addEventListener("click", function () {
     //correct answer
     showHide(question4, question3);
+    document.getElementById('message').innerText = rightWrong[0]; 
+    correctCount++;  
 });
 document.querySelector("#btnQuestion3Option3").addEventListener("click", function () {
     //incorrect answer
     showHide(question4, question3);
+    document.getElementById('message').innerText = rightWrong[1];  
     //speed up progress bar if answer is incorrect
     barIncrement = 12;     
 });
 document.querySelector("#btnQuestion3Option4").addEventListener("click", function () {
     //correct answer
     showHide(question4, question3);
+    document.getElementById('message').innerText = rightWrong[0];  
+    correctCount++; 
 });
+document.querySelector("#btnQuestion4Option1").addEventListener("click", function () {
+    //correct answer          
+        document.getElementById('message').innerText = rightWrong[0]; 
+        correctCount++; 
+             
+});
+document.querySelector("#btnQuestion4Option2").addEventListener("click", function () {
+
+      document.getElementById('message').innerText = rightWrong[1];   
+});
+
 
 document.querySelector("#btnQuizStart").addEventListener("click", function (){    
     showHide(question1, startquiz); 
     var width = 0;
     var id =setInterval(frame, 1000);
     function frame(){
-        if (width == 100){
+        if (width >= 100){
             clearInterval(id);
+            document.getElementById('message').innerText = "Time's up! Game over! Your score is " + 
+            correctCount + " out of " + questionCount + ".";
         }else{
             width+=barIncrement;
             elem.style.width = width + '%';
+            if(width >= 75 && width < 100)
+            document.getElementById('message').innerText = "HURRY UP! Time is running out!";
         }
     }    
 });
+
 
 
 //Load text for Question 1
