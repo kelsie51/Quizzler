@@ -1,10 +1,7 @@
-//TODO: make actual questions/answers
-//TODO: final cleanup/distribute new CSS rules
-
-var questions = ["Are you a new student?", "Look a airplane?","What does this go to?", "Where are the sun go?"] ;
+var questions = ["String values must be enclosed within quotation marks","The condition in an if/else Statement is enclosed within: " ,"Commonly used data types DO NOT include: ", "Arrays in JavaSacript can be used to store other Arrays"] ;
 var trueFalse = ["True", "False"];
-var question2Options = ["I saw a airplane", "That's a pretty cool airplane", "Am I a airplane?"];
-var question3Options = ["3.14","11","the end","nowhere"];
+var question2Options = ["Curly Brackets","Square Brackets","Parenthesis"];
+var question3Options = ["Strings","Booleans","Alerts","Numbers"];
 var rightWrong = ["Great job!", "Incorrect answer. Time is speeding up!!!"];
 
 var elem = document.getElementById("myBar");
@@ -81,7 +78,6 @@ document.querySelector("#btnQuizStart").addEventListener("click", function (){
     }    
 });
 
-//TODO: research querySelector
 //Question 1 buttons
 document.querySelector("#btnQuestion1Option1").addEventListener("click", function () {
     //correct answer
@@ -110,8 +106,8 @@ document.querySelector("#btnQuestion2Option1").addEventListener("click", functio
 document.querySelector("#btnQuestion2Option2").addEventListener("click", function () {
     //correct answer
 	showHide(question3, question2);  
-	document.getElementById('message').innerText = rightWrong[0]; 
-	correctCount++;         
+	document.getElementById('message').innerText = rightWrong[1]; 
+	barIncrement = 6;
 });
 document.querySelector("#btnQuestion2Option3").addEventListener("click", function () {
     //correct answer
@@ -124,27 +120,27 @@ document.querySelector("#btnQuestion2Option3").addEventListener("click", functio
 document.querySelector("#btnQuestion3Option1").addEventListener("click", function () {
     //correct answer
 	showHide(question4, question3);  
-	document.getElementById('message').innerText = rightWrong[0]; 
-	correctCount++;           
+	document.getElementById('message').innerText = rightWrong[1]; 
+	barIncrement = 12;           
 });
 document.querySelector("#btnQuestion3Option2").addEventListener("click", function () {
     //correct answer
     showHide(question4, question3);
-    document.getElementById('message').innerText = rightWrong[0]; 
-    correctCount++;  
+    document.getElementById('message').innerText = rightWrong[1]; 
+    barIncrement = 12;  
 });
 document.querySelector("#btnQuestion3Option3").addEventListener("click", function () {
     //incorrect answer
     showHide(question4, question3);
-    document.getElementById('message').innerText = rightWrong[1];  
+    document.getElementById('message').innerText = rightWrong[0];  
     //speed up progress bar if answer is incorrect
-    barIncrement = 12;     
+     correctCount++;    
 });
 document.querySelector("#btnQuestion3Option4").addEventListener("click", function () {
     //correct answer
     showHide(question4, question3);
-    document.getElementById('message').innerText = rightWrong[0];  
-    correctCount++; 
+    document.getElementById('message').innerText = rightWrong[1];  
+    barIncrement = 12;
 });
 //Question 4 buttons
 document.querySelector("#btnQuestion4Option1").addEventListener("click", function () {
