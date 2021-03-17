@@ -7,4 +7,4 @@
 
 https://kelsie51.github.io/Quizzler/ <li>
   
-![Screenshot](/03-javascript-quizzler.png)
+![Screenshot](/quizzler.PNG)
