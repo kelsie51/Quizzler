@@ -1,4 +1,4 @@
-# Password-Generator
+# Code Quiz
 
 </h1> Quizzler </h1>
 </p> A short timed quiz.
